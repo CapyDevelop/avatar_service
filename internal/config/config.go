@@ -7,7 +7,8 @@ import (
 )
 
 type Config struct {
-	Postgres Postgres `yaml:"postgres"`
+	Postgres  Postgres  `yaml:"postgres"`
+	Transport Transport `yaml:"transport"`
 }
 
 type Postgres struct {
@@ -16,6 +17,11 @@ type Postgres struct {
 	User     string `yaml:"POSTGRES_USER"`
 	Password string `yaml:"POSTGRES_PASSWORD"`
 	DBName   string `yaml:"POSTGRES_DB"`
+}
+
+type Transport struct {
+	Hostname string `yaml:"hostname"`
+	Port     string `yaml:"port"`
 }
 
 func MustLoad() *Config {

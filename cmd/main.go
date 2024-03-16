@@ -171,7 +171,7 @@ func main() {
 		log.Fatalf("faild to listen")
 	}
 
-	conn, err := grpc.Dial("localhost:3079", grpc.WithInsecure(), grpc.WithBlock())
+	conn, err := grpc.Dial(fmt.Sprintf("%s:%s", cfg.Transport.Hostname, cfg.Transport.Port), grpc.WithInsecure(), grpc.WithBlock())
 	if err != nil {
 		log.Println("Error")
 	}
