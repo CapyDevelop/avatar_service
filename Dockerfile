@@ -16,5 +16,5 @@ FROM alpine:latest
 WORKDIR /app
 
 COPY --from=builder /usr/src/service/build/main .
-COPY --from=builder /usr/src/service/config/config.yaml /app/config/config.yaml
+#COPY --from=builder /usr/src/service/config/config.yaml /app/config/config.yaml
 CMD ["/app/main"]

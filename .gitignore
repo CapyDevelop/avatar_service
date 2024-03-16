@@ -3,5 +3,6 @@
 mocks/
 .env
 config/config.yaml
+config/config-docker.yaml
 build/
 bin/

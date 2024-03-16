@@ -14,5 +14,14 @@ services:
       - POSTGRES_DB=avatar
     restart: always
 
+  aratar_service:
+    container_name: avatar_service
+    image: alexseipopov/avatar_service:latest
+    ports:
+      - "1212:1212"
+    volumes:
+      - ./config/config-docker.yaml:/app/config/config.yaml
+
+
 volumes:
   avatar_db_vol:

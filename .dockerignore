@@ -1,0 +1,9 @@
+.git/
+.idea/
+bin/
+build/
+config/config.yaml
+.env
+.gitignore
+docker-compose.yml
+init.sql
