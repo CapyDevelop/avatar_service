@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  avatar_db:
+    container_name: avatar_db
+    image: postgres:15
+    ports:
+      - "5433:5432"
+    volumes:
+      - avatar_db_vol:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=avatar
+    restart: always
+
+volumes:
+  avatar_db_vol:

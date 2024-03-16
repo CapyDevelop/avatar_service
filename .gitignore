@@ -1,0 +1,7 @@
+.idea/
+*.sql
+mocks/
+.env
+config/config.yaml
+build/
+bin/
